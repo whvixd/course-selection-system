@@ -16,7 +16,7 @@ import java.util.List;
 public class StudentDao extends HibernateDaoSupport {
 
     @Resource
-    public void setSessionFactory0(SessionFactory sessionFactory){
+    public void setSessionFactory0(SessionFactory sessionFactory) {
         super.setSessionFactory(sessionFactory);
     }
 
@@ -28,8 +28,8 @@ public class StudentDao extends HibernateDaoSupport {
         List<OclsFavorite> flist = session.createQuery("from OclsFavorite").list();
         List<OclsBlacklist> blist = session.createQuery("from OclsBlacklist ").list();
         //去掉黑名单中的学生
-        for (int i = 0; i < flist.size(); i++) {
-            for (int j = 0; j < blist.size(); j++) {
+        for (int i = 0; i < flist.size() - 1; i++) {
+            for (int j = 0; j < blist.size() - 1; j++) {
                 if (flist.get(i).getOclsStudent() == blist.get(j).getOclsStudent()) {
                     flist.remove(flist.get(i));
                 }
@@ -58,8 +58,8 @@ public class StudentDao extends HibernateDaoSupport {
         List<OclsStudent> slist = new ArrayList<OclsStudent>();
         List<OclsFavorite> flist = session.createQuery("from OclsFavorite").list();
         List<OclsBlacklist> blist = session.createQuery("from OclsBlacklist").list();
-        for (int i = 0; i < flist.size(); i++) {
-            for (int j = 0; j < blist.size(); j++) {
+        for (int i = 0; i < flist.size() - 1; i++) {
+            for (int j = 0; j < blist.size() - 1; j++) {
                 if (flist.get(i).getOclsStudent() == blist.get(j).getOclsStudent()) {
                     flist.remove(flist.get(i));
                 }

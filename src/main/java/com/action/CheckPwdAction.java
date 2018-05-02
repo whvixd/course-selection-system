@@ -11,6 +11,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.Map;
 
 @Service
+@Data
 public class CheckPwdAction extends ActionSupport{
 	private String oldpwd;
 	private String newpwd;

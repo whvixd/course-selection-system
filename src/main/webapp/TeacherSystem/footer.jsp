@@ -1,6 +1,8 @@
- <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
- 
- <footer class="text-right">
-            <p>山东科技大学电气信息系计算机13-4
-            | Designed by <a href="" target="_parent">王铭</a></p>
- </footer>         
+<%@ page language="java" contentType="text/html; charset=utf-8"
+         pageEncoding="utf-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+<footer class="text-right">
+    <p>阜阳师范学院信息工程学院
+        | Designed by <a href="" target="_parent">王志祥</a></p>
+</footer>

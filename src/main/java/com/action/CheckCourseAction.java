@@ -13,6 +13,7 @@ import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 
 @Service
+@Data
 public class CheckCourseAction extends ActionSupport {
     @Resource
     private CourseService courseService;

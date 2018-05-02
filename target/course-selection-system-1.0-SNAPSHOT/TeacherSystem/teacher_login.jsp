@@ -1,8 +1,12 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8" %>
-<%--<%
-String path = request.getContextPath();
-String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-%>--%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+         pageEncoding="utf-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + path + "/";
+    pageContext.setAttribute("ctx", path);
+    pageContext.setAttribute("base", basePath);
+%>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="en">
@@ -13,7 +17,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <title>Teacher - Login</title>
     <meta name="description" content="">
     <meta name="author" content="templatemo">
-    <%@include file="/TeacherSystem/path.jsp" %>
     <!--
     Visual Admin Template
     http://www.templatemo.com/preview/templatemo_455_visual_admin

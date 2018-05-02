@@ -11,9 +11,9 @@
     <meta name="author" content="templatemo">
  
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700' rel='stylesheet' type='text/css'>
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/templatemo-style.css" rel="stylesheet">
+    <link href="/TeacherSystem/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/TeacherSystem/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/TeacherSystem/css/templatemo-style.css" rel="stylesheet">
  <style>
  .sheshi-width{width:100px} 
  </style>
@@ -95,8 +95,8 @@
     </div>
     
     <!-- JS -->
-    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>      <!-- jQuery -->
-    <script type="text/javascript" src="js/templatemo-script.js"></script>      <!-- Templatemo Script -->
+    <script type="text/javascript" src="/TeacherSystem/js/jquery-1.11.2.min.js"></script>      <!-- jQuery -->
+    <script type="text/javascript" src="/TeacherSystem/js/templatemo-script.js"></script>      <!-- Templatemo Script -->
     <script>
       $(document).ready(function(){
         // Content widget with background image

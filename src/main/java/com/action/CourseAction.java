@@ -27,6 +27,7 @@ import java.util.List;
 import java.util.Map;
 
 @Service
+@Data
 public class CourseAction extends ActionSupport{
 	@Resource
 	private CourseService courseService;

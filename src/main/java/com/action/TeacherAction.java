@@ -22,10 +22,14 @@ import java.util.List;
 import java.util.Map;
 
 @Service
-
-// todo tomcat 启动时，bean注入不进去？
+@Data
+/**
+ * tomcat启动时，bean注入不进去:单独在单元测试中注册bean可以?
+ * 原因是stuts有自己的容器，注册了action，但是Spring也有自己的容器，没有和struts的action依赖注入
+ * 少了struts2-spring-plugin.jar
+ */
 public class TeacherAction extends ActionSupport {
-    @Resource
+    @Autowired
     private TeacherService teacherService;
     @Resource
     private CourseService courseService;
@@ -47,18 +51,17 @@ public class TeacherAction extends ActionSupport {
 
     //登录
     public String teacherlogin() {
-//        ApplicationContext context = new ClassPathXmlApplicationContext("classpath:applicationContext.xml");
-//        this.teacherService = context.getBean(TeacherService.class);
-//        this.courseService = context.getBean(CourseService.class);
-
         oclsTeacher = teacherService.teacherlogin(teacher_tnum, teacher_tpwd);
         if (oclsTeacher != null) {
-            Map session = (Map) ActionContext.getContext().getSession();
+            Map session = ActionContext.getContext().getSession();
+            courselistnew = courseService.getNewCourseByTid(oclsTeacher.getTid());
+            popularCourseList = courseService.getPopularCourse(oclsTeacher.getTid());
+
             session.put("teacher", oclsTeacher);
             session.put("teacherid", oclsTeacher.getTid());
             session.put("tpwd", oclsTeacher.getTpwd());
-            courselistnew = courseService.getNewCourseByTid(oclsTeacher.getTid());
-            popularCourseList = courseService.getPopularCourse(oclsTeacher.getTid());
+            session.put("courselistnew", courselistnew);
+            session.put("popularCourseList", popularCourseList);
             return "success";
         }
         return "error";

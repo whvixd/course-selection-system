@@ -1,4 +1,6 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+         pageEncoding="utf-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!-- Left column -->
     <div class="templatemo-flex-row">
       <div class="templatemo-sidebar">
@@ -7,7 +9,7 @@
           <h1>eLearn-讲师平台</h1>
         </header>
         <div class="profile-photo-container">
-          <img src="upload/${oclsTeacher.tphoto }" alt="Profile Photo" class="img-responsive" width="100%" >  
+          <img src="/TeacherSystem/upload/${oclsTeacher.tphoto }" alt="Profile Photo" class="img-responsive" width="100%" >
           <div class="profile-photo-overlay"></div>
         </div>      
         <!-- Search box -->

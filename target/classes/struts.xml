@@ -7,7 +7,7 @@
     <!-- 是否启用开发模式 -->
     <constant name="struts.devMode" value="true"/>
     <!-- 所有匹配*.action或*.do的请求都由struts2处理 -->
-    <constant name="struts.action.extension" value="action"/>
+    <constant name="struts.action.extension" value="action,do"/>
     <!-- 文件上传最大值 -->
     <constant name="struts.multipart.maxSize" value="52428800"/>
     <!-- /static 为存放静态资源的路径，意为不拦截对此文件夹下文件的请求 -->
@@ -36,11 +36,11 @@
             <result name="error">/TeacherSystem/error.jsp</result>
         </action>
         <action name="allCourse" class="com.action.CourseAction" method="allCourse">
-            <result name="success">allCourse.jsp</result>
+            <result name="success">/TeacherSystem/allCourse.jsp</result>
             <result name="error">/TeacherSystem/error.jsp</result>
         </action>
         <action name="showCourseDetail" class="com.action.CourseAction" method="showCourseDetail">
-            <result name="success">courseDetail.jsp</result>
+            <result name="success">/TeacherSystem/courseDetail.jsp</result>
         </action>
         <action name="updateCourse" class="com.action.CourseAction" method="updateCourse">
             <result name="success" type="redirectAction">
@@ -56,7 +56,7 @@
             </result>
         </action>
         <action name="partDetail" class="com.action.CourseAction" method="partDetail">
-            <result name="success">partDetail.jsp</result>
+            <result name="success">/TeacherSystem/partDetail.jsp</result>
         </action>
         <action name="updatePart" class="com.action.CourseAction" method="updatePart">
             <result name="success" type="redirectAction">
@@ -66,7 +66,7 @@
             <result name="error">/TeacherSystem/error.jsp</result>
         </action>
         <action name="jumpAnswer" class="com.action.CourseAction" method="jumpAnswer">
-            <result name="success">answer.jsp</result>
+            <result name="success">/TeacherSystem/answer.jsp</result>
         </action>
         <action name="answerProblem" class="com.action.CourseAction" method="answerProblem">
             <result name="success" type="redirectAction">
@@ -75,10 +75,10 @@
             </result>
         </action>
         <action name="showAllStudent" class="com.action.StudentAction" method="showAllStudent">
-            <result name="success">allStudent.jsp</result>
+            <result name="success">/TeacherSystem/allStudent.jsp</result>
         </action>
         <action name="showBlacklist" class="com.action.StudentAction" method="showBlacklist">
-            <result name="success">blacklist.jsp</result>
+            <result name="success">/TeacherSystem/blacklist.jsp</result>
         </action>
         <action name="addBlacklist" class="com.action.StudentAction" method="addBlacklist">
             <result name="success" type="redirectAction">
@@ -93,21 +93,21 @@
             </result>
         </action>
         <action name="showNewProblem" class="com.action.CourseAction" method="showNewProblem">
-            <result name="success">problemlist.jsp</result>
+            <result name="success">/TeacherSystem/problemlist.jsp</result>
         </action>
         <action name="jumpSelectProblem" class="com.action.CourseAction" method="jumpSelectProblem">
-            <result name="success">variousProblem.jsp</result>
+            <result name="success">/TeacherSystem/variousProblem.jsp</result>
         </action>
         <action name="courseAjax" class="com.action.CourseAction">
             <result type="stream"></result>
         </action>
 
         <action name="selectProblem" class="com.action.CourseAction" method="selectProblem">
-            <result name="success">variousProblem.jsp</result>
+            <result name="success">/TeacherSystem/variousProblem.jsp</result>
         </action>
 
         <action name="jumpPersonCenter" class="com.action.TeacherAction" method="jumpPersonCenter">
-            <result name="success">teacher.jsp</result>
+            <result name="success">/TeacherSystem/teacher.jsp</result>
         </action>
 
         <action name="checkpwd" class="com.action.CheckPwdAction">
@@ -115,22 +115,22 @@
         </action>
 
         <action name="updatepwd" class="com.action.TeacherAction" method="updatepwd">
-            <result name="success">teacher.jsp</result>
+            <result name="success">/TeacherSystem/teacher.jsp</result>
         </action>
         <action name="jumpUpdatePhoto" class="com.action.TeacherAction" method="jumpUpdatePhoto">
-            <result name="success">updatePhoto.jsp</result>
+            <result name="success">/TeacherSystem/updatePhoto.jsp</result>
         </action>
         <action name="jumpUpdatePwd" class="com.action.TeacherAction" method="jumpUpdatePwd">
-            <result name="success">updatePwd.jsp</result>
+            <result name="success">/TeacherSystem/updatePwd.jsp</result>
         </action>
         <action name="jumpAddCourse" class="com.action.CourseAction" method="jumpAddCourse">
-            <result name="success">addCourse.jsp</result>
+            <result name="success">/TeacherSystem/addCourse.jsp</result>
         </action>
         <action name="updatePhoto" class="com.action.TeacherAction" method="updatePhoto">
             <result name="success" type="redirectAction">jumpUpdatePhoto</result>
         </action>
         <action name="selectCourse" class="com.action.CourseAction" method="selectCourse">
-            <result name="success">showSelectCourse.jsp</result>
+            <result name="success">/TeacherSystem/showSelectCourse.jsp</result>
         </action>
 
         <action name="deleteCourse" class="com.action.CourseAction" method="deleteCourse">
@@ -142,10 +142,10 @@
         </action>
 
         <action name="addTeacher" class="com.action.TeacherAction" method="addTeacher">
-            <result name="success">teacher_login.jsp</result>
+            <result name="success">/TeacherSystem/teacher_login.jsp</result>
         </action>
         <action name="logout" class="com.action.TeacherAction" method="logout">
-            <result name="success">teacher_login.jsp</result>
+            <result name="success">/TeacherSystem/teacher_login.jsp</result>
         </action>
 
     </package>

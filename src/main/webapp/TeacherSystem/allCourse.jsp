@@ -12,10 +12,10 @@
     <meta name="author" content="templatemo">
  
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700' rel='stylesheet' type='text/css'>
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/templatemo-style.css" rel="stylesheet">
-     <script src ="js/jquery-1.11.2.min.js"></script>
+    <link href="/TeacherSystem/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/TeacherSystem/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/TeacherSystem/css/templatemo-style.css" rel="stylesheet">
+     <script src ="/TeacherSystem/js/jquery-1.11.2.min.js"></script>
  <style>
  .sheshi-width{width:100px} 
  </style>
@@ -85,7 +85,7 @@
                     		<c:set var="yema"  value="${currentPage}"/>
                     		<c:out value="${xuhao+everyPage*(yema-1)}"/>
                     </td>
-                    <td> <img src="upload/${c.cphoto}" width="90" height="35" ></td>
+                    <td> <img src="/TeacherSystem/upload/${c.cphoto}" width="90" height="35" ></td>
                     <td><a href="showCourseDetail.action?cid=${c.cid}" class="templatemo-link">${c.cname}</a></td>
                     <td>${c.chot}</td>
                     <td><c:if test="${c.cfenlei==1}">计算机</c:if>
@@ -126,8 +126,8 @@
     </div>
     
     <!-- JS -->
-    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>      <!-- jQuery -->
-    <script type="text/javascript" src="js/templatemo-script.js"></script>      <!-- Templatemo Script -->
+    <script type="text/javascript" src="/TeacherSystem/js/jquery-1.11.2.min.js"></script>      <!-- jQuery -->
+    <script type="text/javascript" src="/TeacherSystem/js/templatemo-script.js"></script>      <!-- Templatemo Script -->
     <script>
       $(document).ready(function(){
         // Content widget with background image
